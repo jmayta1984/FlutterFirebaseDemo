@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_firebase_demo/ui/event_screen.dart';
+import 'package:flutter_firebase_demo/ui/login_screen.dart';
 
 
 Future testData() async {
@@ -23,11 +24,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     testData();
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Events',
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: EventScreen(),
+      home: LoginScreen(),
     );
   }
 }
