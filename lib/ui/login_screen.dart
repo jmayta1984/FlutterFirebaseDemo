@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_demo/ui/event_screen.dart';
+import 'package:flutter_firebase_demo/utils/authentication.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -14,6 +16,40 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final txtEmail = TextEditingController();
   final txtPassword = TextEditingController();
+
+  Authentication auth;
+
+  @override
+  void initState() {
+    auth = Authentication();
+    super.initState();
+  }
+
+  Future submit() async {
+    setState(() {
+      _message = '';
+    });
+
+    try {
+      if (_isLogin) {
+        _userId = await auth.login(txtEmail.text, txtPassword.text);
+        print('Login for user $_userId');
+      } else {
+        _userId = await auth.signUp(txtEmail.text, txtPassword.text);
+        print('Sign up for user $_userId');
+      }
+
+      if (_userId != null) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => EventScreen()));
+      }
+    } catch (err) {
+      print('Error: $err');
+      setState(() {
+        _message = err.message;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
           color: Theme.of(context).accentColor,
           elevation: 3,
           child: Text(buttonText),
-          onPressed: () {},
+          onPressed: submit,
         ),
       ),
     );
