@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "742699664591",
+    "firebase_url": "https://events-9b0cb.firebaseio.com",
+    "project_id": "events-9b0cb",
+    "storage_bucket": "events-9b0cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742699664591:android:2077c22250ff55881b63ba",
+        "android_client_info": {
+          "package_name": "pe.edu.upc.events"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742699664591-j1ve9ri98u9mp16merokmhh93q4c3bqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAgBk2xCY_ebuKPIwMXELdNC6HaNB48Z8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742699664591-j1ve9ri98u9mp16merokmhh93q4c3bqe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
