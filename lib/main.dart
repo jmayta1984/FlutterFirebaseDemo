@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_firebase_demo/ui/event_screen.dart';
 
 
 Future testData() async {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: Scaffold(),
+      home: EventScreen(),
     );
   }
 }
