@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
       }
 
       if (_userId != null) {
-        Navigator.push(
+        Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => EventScreen()));
       }
     } catch (err) {

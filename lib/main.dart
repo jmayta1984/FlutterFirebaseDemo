@@ -1,9 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter_firebase_demo/ui/event_screen.dart';
 import 'package:flutter_firebase_demo/ui/launch_screen.dart';
-import 'package:flutter_firebase_demo/ui/login_screen.dart';
 
 
 Future testData() async {
